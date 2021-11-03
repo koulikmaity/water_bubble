@@ -1,0 +1,70 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(247, 248, 247);
+}
+.drops
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drop
+{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background:transparent;
+    border-radius: 57% 43% 37% 63% / 45% 52% 48% 55% ;
+    box-shadow: inset 10px 10px 16px rgb(172, 167, 167),
+                    10px 20px 12px rgb(197, 194, 194),
+                inset -15px -15px 25px white;  
+
+}
+.drop::before
+{
+    content: '';
+    top: 25px;
+    left: 35px;
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 39% 61% 36% 64% / 45% 35% 65% 55%  ;
+}
+.drop::after
+{
+    content: '';
+    top: 25px;
+    left: 65px;
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 39% 61% 36% 64% / 45% 35% 65% 55%  ;
+}
+.drop:nth-child(2)
+{
+    transform: scale(0.5) translate(-200px,180px);
+    border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+}
+.drop:nth-child(3)
+{
+    transform: scale(0.5) translate(240px,100px);
+    border-radius: 54% 36% 36% 58% / 32% 37% 63% 58%;   
+}
+.drop:nth-child(4)
+{
+    transform: scale(0.8) translate(169px, -100px);
+    border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;   
+}
